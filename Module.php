@@ -15,4 +15,9 @@ class Module extends ModuleProvider
      * @var string
      */
     protected $namespace = __NAMESPACE__;
+
+    /**
+     * @var boolean
+     */
+    protected $private = true;
 }
