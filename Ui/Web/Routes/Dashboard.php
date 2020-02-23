@@ -12,6 +12,8 @@ class Dashboard extends HttpRouter
      */
     public function map(Router $router): void
     {
-        $router->get('home', 'HomeController@index')->name('home');
+        $router->group(['middleware' => 'auth'], function (Router $router) {
+            $router->get('home', 'HomeController@index')->name('home');
+        });
     }
 }
