@@ -15,5 +15,7 @@ class Dashboard extends HttpRouter
         $router->group(['middleware' => 'auth'], function (Router $router) {
             $router->get('home', 'HomeController@index')->name('home');
         });
+
+        $router->get('/', 'WelcomeController@index')->name('welcome');
     }
 }
