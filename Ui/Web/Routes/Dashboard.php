@@ -21,15 +21,4 @@ class Dashboard extends HttpRouter
     {
         $router->get('dashboard', 'HomeController@index')->name('home');
     }
-
-    /**
-     * @param array $middlewares
-     * @return array
-     */
-    public function getMiddlewares($middlewares = []): array
-    {
-        $middlewares = !is_array($middlewares) ? [$middlewares] : $middlewares;
-
-        return array_merge($middlewares, $this->middlewares);
-    }
 }
