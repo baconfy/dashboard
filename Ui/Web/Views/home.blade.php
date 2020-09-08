@@ -1,7 +1,6 @@
-@extends('ui::layouts.app')
+@extends('dashboard::layout')
 
 @section('title', __('dashboard::home.title'))
 
 @section('content')
-    <h1>{{ __('dashboard::home.title') }}</h1>
 @endsection
